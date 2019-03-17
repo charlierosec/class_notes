@@ -1,7 +1,10 @@
-School: Drexel University
+## Course Information
 
-Course: CS-260 Data Structures
+**School:** Drexel University
 
-Term: Winter 2019
+**Course:** CS-260 Data Structures
 
-Professor: Kurt Schmidt
+**Term:** Winter 2019
+
+**Professor:** Kurt Schmidt
+

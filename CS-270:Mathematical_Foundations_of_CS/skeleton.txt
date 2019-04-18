@@ -1,0 +1,33 @@
+Topics:
+
+Racket
+	Basic Notation
+	Functional
+	Recursion
+
+Lists
+	constructing in racket
+	linked lists
+	proofs
+	foldr
+	map
+
+Quick Boolean
+	And
+	Or
+	Not
+	Xor
+	Implies
+	Iff
+
+Peano Numbers
+
+Double Notation
+
+Proofs
+	Deduction
+	The proof checker <3
+	Induction
+
+Propositional and Predicate Logic
+

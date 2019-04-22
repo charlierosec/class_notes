@@ -4,7 +4,7 @@
 #Email: src322@drexel.edu
 #
 #Purpose:
-#  Implement a binary tree with a class.
+#  Implement a binary search tree with a class.
 #
 #Last Edit: 4/22/2019
 #  Fixed minor errors
@@ -24,46 +24,29 @@ def calcHeight(t):
 		if calcHeight( t.right ) > maxC:
 			maxC = calcHeight( t.right)
 		return (maxC + 1)
-				
+
+#Insert the value, x into T 
+def insert(x, T):
+	if T is None:
+		T = BinTree(x)
+	if x > T.data:
+		insert(x, T.right)
+	elif x < T.data:
+		insert(x, T.left)
+	else:
+		T.count += 1
+
+def stringTree(T):
+	
+
+
 class BinTree:
 	def __init__(self, d, l = None, r = None):
 		self.data = d
 		self.left = l
 		self.right = r
+		self.count = 1
 	def __str__(self):
 		return self.data
 
 if __name__ == "__main__":
-	print("")
-	print("I have created the following tree:")
-	print("   A")
-	print("/    \\")
-	print("B     D")
-	print("\\     /\\")
-	print(" E    G H")
-	print("")
-	
-	a = BinTree("A")
-	b = BinTree("B")
-	d = BinTree("D")
-	e = BinTree("E")
-	g = BinTree("G")
-	h = BinTree("H")
-
-	a.left = b
-	a.right = d
-	b.right = e
-	d.left = g
-	d.right = h
-
-	allNodes = [a, b, d, e, g, h]
-
-	print(" Node | Height | Children ")
-	print("--------------------------")
-	for node in allNodes:
-		thestr = "   " + node.data + "  |"
-		thestr += "    " + str(calcHeight(node)) + "   |"
-		thestr += "L: " + str(node.left) + ", R: " + str(node.right)		
-
-		print(thestr)
-

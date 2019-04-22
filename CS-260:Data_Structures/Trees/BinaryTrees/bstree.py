@@ -7,7 +7,10 @@
 #  Implement a binary search tree with a class.
 #
 #Last Edit: 4/22/2019
-#  Fixed minor errors
+#  Created implementation
+
+import random
+
 
 #In order to calculate the height, I found the heights of all the children
 #Then I took the child with the maximum height and added 1 to that
@@ -25,19 +28,44 @@ def calcHeight(t):
 			maxC = calcHeight( t.right)
 		return (maxC + 1)
 
+def printTree(T, lvl = 0):
+	tabs = "\t" * lvl
+	print("Node:", T.data, "[", T.count, "]")
+	if T.left is not None:
+		print(tabs, "Left ", end="")
+		printTree(T.left, lvl + 1)
+	else:
+		print(tabs ,"Left: None")
+
+	if T.right is not None:
+		print(tabs, "Right ", end="")
+		printTree(T.right, lvl + 1)
+	else:
+		print(tabs,"Right: None")
+
+
 #Insert the value, x into T 
 def insert(x, T):
-	if T is None:
-		T = BinTree(x)
 	if x > T.data:
-		insert(x, T.right)
+		if T.right is None:
+			T.right = BinTree(x)
+		else:
+			insert(x, T.right)
 	elif x < T.data:
-		insert(x, T.left)
+		if T.left is None:
+			T.left = BinTree(x)
+		else:
+			insert(x, T.left)
 	else:
-		T.count += 1
+		T.count += 1	
 
-def stringTree(T):
+#Returns true or false if value x is in tree T
+def findval(x, T):
 	
+	if x == T.data:
+		return True
+	else:
+		if x > T.data:
 
 
 class BinTree:
@@ -50,3 +78,20 @@ class BinTree:
 		return self.data
 
 if __name__ == "__main__":
+	print("")
+	print("First I'm going to start with an empty tree, then use my insert function")
+	print("to populate the tree.")
+	print("In my Binary Search Trees, I hand duplicates by counting the amount of")
+	print("each value in the tree and updating the count accordingly")
+	print("")
+	
+	myTree = BinTree(10)
+	print("Starting Tree:")
+	printTree(myTree)
+
+	for i in range(10):
+		newVal = random.randint(0,50)
+		print("Inserting", newVal)
+		insert(newVal, myTree)
+	print("Resulting Tree:")
+	printTree(myTree)

@@ -61,12 +61,47 @@ def insert(x, T):
 
 #Returns true or false if value x is in tree T
 def findval(x, T):
-	
+	if T is None:
+		return False
 	if x == T.data:
 		return True
 	else:
 		if x > T.data:
+			return findval(x, T.right)
+		elif x < T.data:
+			return findval(x, T.left)
 
+def removeval(x, T):
+	rv = False
+	if findval(x, T):
+		if x == T.data:
+			if T.count > 1:
+				rv = T.data
+				T.count -= 1
+			else:
+				if T.right is None:
+					rv = T.data
+					T = T.left
+				elif T.left is None:
+					rv = T.data
+					T = T.right
+				else:	
+					#else: get leftmost child in right tree and promote
+					pass
+		elif x > T.data:
+			removeval(x, T.right)
+		else:
+			removeval(x, T.left)
+	
+	return rv
+
+def getleftmostchild(T):
+	if T.left is not None:
+		getleftmostchild(T.left)
+	
+	rv = T.data
+	T = T.right
+	return rv
 
 class BinTree:
 	def __init__(self, d, l = None, r = None):
@@ -85,13 +120,23 @@ if __name__ == "__main__":
 	print("each value in the tree and updating the count accordingly")
 	print("")
 	
-	myTree = BinTree(10)
+	myTree = BinTree(5)
 	print("Starting Tree:")
 	printTree(myTree)
+	print("")
 
 	for i in range(10):
-		newVal = random.randint(0,50)
+		newVal = random.randint(0,10)
 		print("Inserting", newVal)
 		insert(newVal, myTree)
 	print("Resulting Tree:")
 	printTree(myTree)
+	print("")
+
+	for i in range(10):
+		lookVal = random.randint(0,15)
+		print("Finding", lookVal, ":", findval(lookVal,myTree))
+	print("")
+	
+	print("Removing 5")
+

@@ -8,7 +8,7 @@
 
 **Professor:** Kurt Schmidt
 
-##Sections Covered
+## Sections Covered
 - Big Oh Notation
 - Linked Lists
 - Stacks

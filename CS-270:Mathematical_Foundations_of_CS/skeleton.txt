@@ -1,8 +1,8 @@
 Topics:
 
 Racket
-	Basic Notation
-	Functional
+	Basic Notation X
+	Functional X
 	Recursion
 
 Lists
@@ -12,13 +12,17 @@ Lists
 	foldr
 	map
 
-Quick Boolean
-	And
-	Or
-	Not
-	Xor
-	Implies
-	Iff
+Quick Boolean X
+	And X
+	Or  X
+	Not X
+	Xor X
+	DeMorgans X
+	Nor X
+	Nand X
+	Implies X 
+	Iff X
+	Conjuntive and Disjunctive Forms
 
 Peano Numbers
 

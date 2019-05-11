@@ -8,6 +8,35 @@
 
 **Professor:** Kurt Schmidt
 
+##Sections Covered
+- Big Oh Notation
+- Linked Lists
+- Stacks
+- Queues
+- Heaps
+- Merge-Find Sets
+- Trees
+  - General Trees
+  - Binary Trees
+  - Tries
+  - Huffman Codes
+- Graph Theory
+  - Spanning Trees
+    - Minimum Spanning Trees
+    - Breadth First Search
+    - Depth First Search
+    - Kruskal
+    - Prim
+  - Bipartide Graphs
+  - Directed Acyclic Graph
+  - Dijkstra
+  - Floyd Warshaw
+- Recurrence Relations
+  - Binary Search
+  - Quick Sort
+  - Selection Sort
+- Radix Sort
+
 ## Liability Notice
 The purpose of this repo is to provide help for students taking these classes.
 This is not for uses of plagiarism and cheating.

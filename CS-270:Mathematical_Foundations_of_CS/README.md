@@ -11,6 +11,21 @@
 ## In Progress
 This repo is currently in progress and will be updated
 
+## Sections Covered
+- Racket
+- Boolean Algebra
+	- Not
+	- Or
+	- And
+	- Xor
+	- DeMorgan's Law
+	- Nor
+	- Nand
+	- Iff
+	- Implies
+	- Conjunctive Normal Form
+	- Disjunctive Normal Form
+
 ## Liability Notice
 The purpose of this repo is to provide help for students taking these classes. 
 While there are no homework answers or solutions, 

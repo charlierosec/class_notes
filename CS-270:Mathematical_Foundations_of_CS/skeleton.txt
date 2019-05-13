@@ -22,7 +22,7 @@ Quick Boolean X
 	Nand X
 	Implies X 
 	Iff X
-	Conjuntive and Disjunctive Forms
+	Conjuntive and Disjunctive Forms X
 
 Peano Numbers
 
@@ -34,4 +34,9 @@ Proofs
 	Induction
 
 Propositional and Predicate Logic
+
+Links
+	Racket Download
+	Racket Documentation
+	Proof Checker
 

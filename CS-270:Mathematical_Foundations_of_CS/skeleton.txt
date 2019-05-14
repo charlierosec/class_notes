@@ -1,9 +1,6 @@
 Topics:
 
-Racket
-	Basic Notation X
-	Functional X
-	Recursion
+Recursion
 
 Lists
 	constructing in racket
@@ -11,18 +8,6 @@ Lists
 	proofs
 	foldr
 	map
-
-Quick Boolean X
-	And X
-	Or  X
-	Not X
-	Xor X
-	DeMorgans X
-	Nor X
-	Nand X
-	Implies X 
-	Iff X
-	Conjuntive and Disjunctive Forms X
 
 Peano Numbers
 
@@ -34,9 +19,4 @@ Proofs
 	Induction
 
 Propositional and Predicate Logic
-
-Links
-	Racket Download
-	Racket Documentation
-	Proof Checker
 

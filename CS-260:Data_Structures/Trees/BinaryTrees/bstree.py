@@ -6,8 +6,8 @@
 #Purpose:
 #  Implement a binary search tree with a class.
 #
-#Last Edit: 4/22/2019
-#  Created implementation
+#Last Edit: 5/3/2019
+#  Editted Removal method (I don't think it works yet)
 
 import random
 
@@ -85,9 +85,9 @@ def removeval(x, T):
 				elif T.left is None:
 					rv = T.data
 					T = T.right
-				else:	
-					#else: get leftmost child in right tree and promote
-					pass
+				else:
+					rv = T.data
+					T.data = getleftmostchild(T)
 		elif x > T.data:
 			removeval(x, T.right)
 		else:
@@ -129,6 +129,8 @@ if __name__ == "__main__":
 		newVal = random.randint(0,10)
 		print("Inserting", newVal)
 		insert(newVal, myTree)
+	print("Inserting 5")
+	insert(5, myTree)
 	print("Resulting Tree:")
 	printTree(myTree)
 	print("")
@@ -138,5 +140,6 @@ if __name__ == "__main__":
 		print("Finding", lookVal, ":", findval(lookVal,myTree))
 	print("")
 	
-	print("Removing 5")
 
+	print("Removing 5")
+	printTree(myTree)

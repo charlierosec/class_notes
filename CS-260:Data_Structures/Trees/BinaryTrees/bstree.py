@@ -6,8 +6,8 @@
 #Purpose:
 #  Implement a binary search tree with a class.
 #
-#Last Edit: 5/3/2019
-#  Editted Removal method (I don't think it works yet)
+#Last Edit: 5/15/2019
+#  Fixed Removal method
 
 import random
 
@@ -71,27 +71,33 @@ def findval(x, T):
 		elif x < T.data:
 			return findval(x, T.left)
 
-def removeval(x, T):
+def removeval(x, T, p = None, left = False):
 	rv = False
+	nv = None
 	if findval(x, T):
 		if x == T.data:
 			if T.count > 1:
 				rv = T.data
 				T.count -= 1
 			else:
+				rv = T.data
+
 				if T.right is None:
-					rv = T.data
-					T = T.left
+					nv = T.left
 				elif T.left is None:
-					rv = T.data
-					T = T.right
+					nv = T.right
 				else:
-					rv = T.data
-					T.data = getleftmostchild(T)
+					nv = getleftmostchild(T.right)
+			
+				if left:
+					p.left = nv
+				else:
+					p.right = nv
+
 		elif x > T.data:
-			removeval(x, T.right)
+			removeval(x, T.right, T, False)
 		else:
-			removeval(x, T.left)
+			removeval(x, T.left, T, True)
 	
 	return rv
 
@@ -133,13 +139,17 @@ if __name__ == "__main__":
 	insert(5, myTree)
 	print("Resulting Tree:")
 	printTree(myTree)
-	print("")
-
+	print("") 
+				
 	for i in range(10):
 		lookVal = random.randint(0,15)
 		print("Finding", lookVal, ":", findval(lookVal,myTree))
 	print("")
 	
-
-	print("Removing 5")
+	for i in range(5):
+		lookVal = random.randint(0,15)
+		if( findval(lookVal,myTree) ):
+			print("Removing", lookVal)
+			removeval(lookVal,myTree)
+	print("")
 	printTree(myTree)

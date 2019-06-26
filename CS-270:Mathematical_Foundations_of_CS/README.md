@@ -25,6 +25,8 @@ This repo is currently in progress and will be updated
 	- Implies
 	- Conjunctive Normal Form
 	- Disjunctive Normal Form
+- Proofs
+	- Induction
 
 ## Liability Notice
 The purpose of this repo is to provide help for students taking these classes. 

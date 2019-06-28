@@ -9,8 +9,6 @@ Lists
 	foldr
 	map
 
-Peano Numbers
-
 Double Notation
 
 Proofs

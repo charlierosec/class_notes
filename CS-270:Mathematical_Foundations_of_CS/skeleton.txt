@@ -14,7 +14,5 @@ Double Notation
 Proofs
 	Deduction
 	The proof checker <3
-	Induction
 
 Propositional and Predicate Logic
-

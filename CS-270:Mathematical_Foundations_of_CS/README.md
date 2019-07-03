@@ -25,6 +25,7 @@ This repo is currently in progress and will be updated
 	- Implies
 	- Conjunctive Normal Form
 	- Disjunctive Normal Form
+- Lists
 - Peano Numbers
 - Double Notation
 - Proofs

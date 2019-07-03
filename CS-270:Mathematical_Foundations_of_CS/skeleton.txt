@@ -2,12 +2,6 @@ Topics:
 
 Recursion
 
-Lists
-	constructing in racket
-	linked lists
-	foldr
-	map
-
 Proofs
 	Deduction
 	The proof checker <3

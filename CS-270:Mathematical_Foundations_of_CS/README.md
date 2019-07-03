@@ -26,6 +26,7 @@ This repo is currently in progress and will be updated
 	- Conjunctive Normal Form
 	- Disjunctive Normal Form
 - Peano Numbers
+- Double Notation
 - Proofs
 	- Induction
 

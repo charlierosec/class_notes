@@ -5,14 +5,12 @@ Recursion
 Lists
 	constructing in racket
 	linked lists
-	proofs
 	foldr
 	map
-
-Double Notation
 
 Proofs
 	Deduction
 	The proof checker <3
+	Proofs with lists (cons a B)
 
 Propositional and Predicate Logic

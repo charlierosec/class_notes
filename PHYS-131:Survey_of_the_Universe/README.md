@@ -10,6 +10,9 @@
 
 ## Sections Covered
 - Unit 1
+	- Part 1
+		- Gravity
+		- Seasons
 - Unit 2
 - Unit 3
 - Unit 4
